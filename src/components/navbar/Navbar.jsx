@@ -5,7 +5,8 @@ import './navbar.scss'
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
 
-    window.onscroll = () =>{
+    window.onscroll = () =>
+    {
         setIsScrolled(window.pageYOffset === 0 ? false : true);
         return () => (window.onscroll = null);
     };
@@ -14,6 +15,7 @@ const Navbar = () => {
     return (
         <div className={isScrolled ? "navbar scrolled" :"navbar"}>
             <div className="container">
+            
                 <div className="left">
                     <img
                         src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png"
@@ -24,8 +26,8 @@ const Navbar = () => {
                     <span>Movies</span>
                     <span>New and Popular</span>
                     <span>MyList</span>
-
                 </div>
+
                 <div className="right">
                     <Search className="icon"/>
                     <span>KID</span>
